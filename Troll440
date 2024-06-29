@@ -1,0 +1,53 @@
+class DivorceProcess:
+    def __init__(self, petitioner, respondent):
+        self.petitioner = petitioner
+        self.respondent = respondent
+        self.petition_filed = False
+        self.petition_approved = False
+        self.agreement_reached = False
+        self.finalized = False
+
+    def file_petition(self):
+        if self.petitioner.is_ready_to_file():
+            self.petition_filed = True
+        else:
+            print("Petitioner is not ready to file the petition.")
+
+    def respond_to_petition(self):
+        if self.petition_filed and self.respondent.is_ready_to_respond():
+            self.petition_approved = True
+        else:
+            print("Respondent cannot respond until petition is filed and approved.")
+
+    def negotiate(self):
+        if self.petition_approved:
+            # Example of negotiation process
+            self.agreement_reached = True
+        else:
+            print("Cannot negotiate until petition is approved.")
+
+    def finalize_divorce(self):
+        if self.agreement_reached:
+            # Example of finalizing the divorce
+            self.finalized = True
+        else:
+            print("Cannot finalize divorce until agreement is reached.")
+
+# Example usage:
+if __name__ == "__main__":
+    petitioner = Person("Alice")
+    respondent = Person("Bob")
+    divorce_process = DivorceProcess(petitioner, respondent)
+
+    divorce_process.file_petition()
+    divorce_process.respond_to_petition()
+    divorce_process.negotiate()
+    divorce_process.finalize_divorce()
+
+    if divorce_process.finalized:
+        print("Divorce finalized successfully.")
+    else:
+        print("Divorce process incomplete.")  
+(tata .troll make to the caode off the mater ..- "do you wan5 to the make his to the 
+trying to the ..) 
+"the codes is not .simple ....///
